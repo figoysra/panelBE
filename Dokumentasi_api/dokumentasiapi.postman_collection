@@ -1,0 +1,323 @@
+{
+	"info": {
+		"_postman_id": "df96756c-dba4-40c6-a4ef-c46ebbdff30d",
+		"name": "Tes Knowledge",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get All Products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:2001/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"userone@email.com\",\r\n    \"password\" : \"12345\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2001/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Data Users",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjM5NTA2Njk0fQ.Doi9EAsYJyKbNGpRFpovfQqKjhfsWQYEi1RY2VqVufY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "userOne",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": "/A:/Fazztrack/tesKnowledge/BE/uploads/905975722.jpg"
+						},
+						{
+							"key": "email",
+							"value": "userone@email.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2001/updateUser",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"updateUser"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"userempat@email.com\",\r\n    \"password\" : \"12345\",\r\n    \"gender\" : \"2\",\r\n    \"name\" : \"USER FOR\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:2001/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Data User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MiwiaWF0IjoxNjM5NTA3MTUyfQ.DpJGNF5WDwbdFHvFwkPkI3fg2JWMfkgx6axRxVMSeiQ",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2001/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get My Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjM5NTA3MjczfQ.RaR6M3ChfTNkpdzXw6J-OUeFEdcMTINMWLbrYCLxsmM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2001/myproducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"myproducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "My Products Detail",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjM5NTA3MjczfQ.RaR6M3ChfTNkpdzXw6J-OUeFEdcMTINMWLbrYCLxsmM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2001/myproducts/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"myproducts",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "insert Products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjM5NTA3MjczfQ.RaR6M3ChfTNkpdzXw6J-OUeFEdcMTINMWLbrYCLxsmM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_name",
+							"value": "mantap",
+							"type": "text"
+						},
+						{
+							"key": "product_desc",
+							"value": "good",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": [],
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2001/insertProducts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"insertProducts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update My Products",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjM5NTA3MjczfQ.RaR6M3ChfTNkpdzXw6J-OUeFEdcMTINMWLbrYCLxsmM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "product_name",
+							"value": "Good",
+							"type": "text"
+						},
+						{
+							"key": "product_desc",
+							"value": "Mantap",
+							"type": "text"
+						},
+						{
+							"key": "image",
+							"type": "file",
+							"src": []
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:2001/updateProducts/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"updateProducts",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Products",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNjM5NTA3MjczfQ.RaR6M3ChfTNkpdzXw6J-OUeFEdcMTINMWLbrYCLxsmM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:2001/deleteProducts/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "2001",
+					"path": [
+						"deleteProducts",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
